@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/mozi1" xmlns:tns="http://www.example.org/mozi1" elementFormDefault="qualified">
+
+<element name="mozi">
+  <complexType>
+    <sequence>
+      <element name="film">
+      	<complexType>
+      		<sequence>
+      			<element name="rendezo">
+      				<complexType>
+      					<attribute name="id" type="integer"/>
+      					<attribute name="nev" type="string"/>
+      				</complexType>
+      			</element>
+      			<element name="szinesz">
+      				<complexType>
+      					<attribute name="id" type="integer"/>
+      					<attribute name="nev" type="string"/>
+      				</complexType>
+      			</element>
+      			<element name="iro">
+      				<complexType>
+      					<attribute name="id" type="integer"/>
+      				</complexType>
+      			</element>
+      		</sequence>
+      		<attribute name="id" type="integer"/>
+      		<attribute name="mufaj" type="string"/>
+      	</complexType>
+      </element>
+    </sequence>
+  </complexType>
+</element>
+
+
+</schema>

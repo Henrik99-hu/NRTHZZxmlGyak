@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ember" xmlns:tns="http://www.example.org/ember" elementFormDefault="qualified">
+
+	<element name="ember">
+		<complexType>
+			<sequence>
+				<element name="nev1" type="string"/>
+				<element name="fizetes" type="int"/>
+				<element name="nev" type="string"/>
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>

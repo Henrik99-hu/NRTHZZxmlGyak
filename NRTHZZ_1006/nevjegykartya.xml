@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nevjegykartyak>
+	<nevjegykartya id="elso">
+		<nev>Schneider Henrik</nev>
+		<ceg>
+			<cim>
+				<iranyitoszam>7090</iranyitoszam>
+				<varos>Tamási</varos>
+				<utca>Ezegyutca</utca>
+				<hazszam>15</hazszam>
+			</cim>
+			<nev>Én Cégem</nev>
+			<telefonszam korzet="47">0647283756</telefonszam>
+			<weblap>http://www.thisismyweblap.com</weblap>
+		</ceg>
+		<beosztas>Tanuló</beosztas>
+		<telefonszam korzet="46">0646767987</telefonszam>
+		<email>schneider.henrik@example.org</email>
+	</nevjegykartya>
+</nevjegykartyak>

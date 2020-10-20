@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tanfolyam>
+	<konferencia>
+		<cim>XML gyakorlat</cim>
+		<hallgatok>
+			<hallgato>
+				<nev>Schneider Henrik</nev>
+				<lakcim>Miskolc Kuruc utca</lakcim>
+			</hallgato>
+		</hallgatok>
+		<helyszin>Miskolci Egyetem</helyszin>
+		<eloado>
+			<nev>Bednarik László</nev>
+			<adoszam>7182372137</adoszam>
+			<lakcim>Város utca házszám 1</lakcim>
+		</eloado>
+		<datum>2020.20.20.</datum>
+	</konferencia>
+</tanfolyam>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/orarend" xmlns:tns="http://www.example.org/orarend" elementFormDefault="qualified">
+
+	<element name="orarend">
+		<complexType>
+			<sequence>			
+				<element name="ora" type="tns:oraTipus">
+				</element>
+    		</sequence>
+  		</complexType>
+	</element>
+
+	<complexType name="oraTipus">
+		<sequence>
+			<element name="targy" type="string"/>
+			<element name="idopont" type="tns:idopontTipus"></element>
+			<element name="helyszin" type="string"/>
+			<element name="oktato" type="string"/>
+			<element name="szak" type="string"/>
+		</sequence>
+		<attribute name="id" type="integer"/>
+		<attribute name="tipus" type="string"/> 
+	</complexType>
+
+    <complexType name="idopontTipus">
+    	<sequence>
+    		<element name="nap" type="string"/>
+			<element name="tol" type="string"/>
+			<element name="ig" type="string"/>
+    	</sequence>
+    </complexType>
+</schema>
