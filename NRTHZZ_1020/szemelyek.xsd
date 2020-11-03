@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/szemelyek" xmlns:tns="http://www.example.org/szemelyek" elementFormDefault="qualified">
+
+	<element name="szemelyek">
+		<complexType>
+			<sequence>			
+				<element name="szemely" type="tns:szemelyTipus">
+				</element>
+    		</sequence>
+  		</complexType>
+	</element>
+	
+	<complexType name="szemelyTipus">
+		<sequence>
+			<element name="nev" type="string"/>
+			<element name="kor" type="integer"/>
+			<element name="varos" type="string"/>
+		</sequence>
+		<attribute name="id" type="integer"/>
+	</complexType>
+
+</schema>
