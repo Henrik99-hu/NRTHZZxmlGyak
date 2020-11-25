@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/XMLSchemaNRTHZZ" xmlns:tns="http://www.example.org/XMLSchemaNRTHZZ" elementFormDefault="qualified">
+
+	<element name="korhaz" type="tns:korhazTipus"/>
+	
+	<complexType name="mutoTipus">
+		<sequence>
+			<element name="mutoDoktor" type="string"/>
+			<element name="mutetIdeje" type="string"/>
+			<element name="paciensNeve" type="string"/>
+			<element name="mutesOka" type="string"/>
+		</sequence>
+		<attribute name="mutoId" type="string" use="required"/>
+	</complexType>
+	
+	<complexType name="doktorTipus">
+		<sequence>
+			<element name="nev" type="string"/>
+			<element name="telefonszam" type="string"/>
+			<element name="csatlakozasEve" type="integer"/>
+			<element name="email" type="string" minOccurs="0"/>
+		</sequence>
+		<attribute name="dolgozoId" type="string" use="required"/>
+		<attribute name="mutoId" type="IDREF"/>
+	</complexType>
+	
+	<complexType name="cimTipus">
+		<sequence>
+			<element name="iranyitoszam" type="integer"/>
+			<element name="varos" type="string"/>
+			<element name="utca" type="string"/>
+			<element name="hazszam" type="integer"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="paciensTipus">
+		<sequence>
+			<element name="nev" type="string"/>
+			<element name="megbetegedesIdeje" type="integer"/>
+			<element name="cim" type="tns:cimTipus"/>
+			<element name="telefonszam" type="string"/>
+			<element name="betegsegTipusa" type="string" maxOccurs="unbounded"/>
+		</sequence>
+		<attribute name="betegId" type="string" use="required"/>
+		<attribute name="dolgozoId" type="string" use="required"/>
+		<attribute name="mutoId" type="IDREF"/>
+	</complexType>
+	
+	<complexType name="gyogyszerTipus">
+		<sequence>
+			<element name="nev" type="string"/>
+			<element name="betegsegEllen" type="string"/>
+			<element name="venyNelkul" type="string"/>
+			<element name="allergenAnyagok" type="string" maxOccurs="unbounded"/>
+		</sequence>
+		<attribute name="gyogyszerId" type="string" use="required"/>
+	</complexType>
+	
+	<complexType name="szedTipus">
+		<sequence>
+			<element name="mennyit" type="string"/>
+		</sequence>
+		<attribute name="betegId" type="IDREF"/>
+		<attribute name="gyogyszerId" type="IDREF"/>
+	</complexType>
+	
+	<complexType name="korhazTipus">
+		<sequence>
+			<element name="muto" type="tns:mutoTipus" maxOccurs="unbounded"/>
+			<element name="doktor" type="tns:doktorTipus" maxOccurs="unbounded"/>
+			<element name="paciens" type="tns:paciensTipus" maxOccurs="unbounded"/>
+			<element name="gyogyszer" type="tns:gyogyszerTipus" maxOccurs="unbounded"/>
+			<element name="szed" type="tns:szedTipus" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	
+</schema>

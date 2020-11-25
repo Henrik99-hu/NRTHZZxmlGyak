@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<korhaz>
+
+	<muto mutoId="1">
+		<mutodoktor>Dr Kiss Béla</mutodoktor>
+		<mutetIdeje>2020.05.23</mutetIdeje>
+		<paciensNeve>Kós Péter</paciensNeve>
+		<mutesOka>Műtendő betegség</mutesOka>
+	</muto>
+
+	<muto mutoId="2">
+		<mutodoktor>Dr János Pál</mutodoktor>
+		<mutetIdeje>2020.09.13</mutetIdeje>
+		<paciensNeve>Koaxk Ábel</paciensNeve>
+		<mutesOka>Műtendő betegség</mutesOka>
+	</muto>
+
+	<doktor dolgozoId="1" mutoId="1">
+		<nev>Dr Kiss Béla</nev>
+		<telefonszam>06708237465</telefonszam>
+		<csatlakozasEve>2001</csatlakozasEve>
+		<email>belakiss@gmail.com</email>
+	</doktor>
+	<doktor dolgozoId="2" mutoId="2">
+		<nev>Dr János Pál</nev>
+		<telefonszam>06506327463</telefonszam>
+		<csatlakozasEve>2002</csatlakozasEve>
+	</doktor>
+	
+	<paciens betegId="1" dolgozoId="1" mutoId="1">
+		<nev>Kós Péter</nev>
+		<megbetegedesIdeje>2019</megbetegedesIdeje>
+		<cim>
+			<iranyitoszam>3530</iranyitoszam>
+			<varos>Miskolc</varos>
+			<utca>Kiss János utca</utca>
+			<hazszam>5</hazszam>
+		</cim>
+		<telefonszam>06306511315</telefonszam>
+		<betegsegTipusa>Arthritis</betegsegTipusa>
+		<betegsegTipusa>Combcsonttörés</betegsegTipusa>
+	</paciens>
+	
+	<paciens betegId="2" dolgozoId="2" mutoId="2">
+		<nev>Koaxk Ábel</nev>
+		<megbetegedesIdeje>2020</megbetegedesIdeje>
+		<cim>
+			<iranyitoszam>3531</iranyitoszam>
+			<varos>Miskolc</varos>
+			<utca>Péter Pál utca</utca>
+			<hazszam>3</hazszam>
+		</cim>
+		<telefonszam>06307123272</telefonszam>
+		<betegsegTipusa>Mogyoró allergia</betegsegTipusa>
+		<betegsegTipusa>Tüdőembólia</betegsegTipusa>
+	</paciens>
+	
+	<gyogyszer gyogyszerId="1">
+		<nev>Tilanol</nev>
+		<betegsegEllen>Fejfájás</betegsegEllen>
+		<venyNelkul>Igen</venyNelkul>
+		<allergenAnyagok>Mogyoró</allergenAnyagok>
+		<allergenAnyagok>Tojáshéj</allergenAnyagok>
+	</gyogyszer>
+	
+	<szed betegId="1" gyogyszerId="1">
+		<mennyit>Napi 3</mennyit>
+	</szed>
+	
+	<szed betegId="2" gyogyszerId="1">
+		<mennyit>Napi 10</mennyit>
+	</szed>
+
+</korhaz>
